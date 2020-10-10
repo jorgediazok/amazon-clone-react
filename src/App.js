@@ -18,7 +18,6 @@ function App() {
         </Route>
         <Route path="/">
         <Header/>
-        <h1>Home Page</h1> 
         <Home /> 
         </Route> 
       </Switch>
