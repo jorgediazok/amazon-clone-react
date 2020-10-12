@@ -4,7 +4,7 @@ import "../styles/Product.css"
 
 function Product({id,title,price,rating,image}) {
 
-  const [{basket}, dispatch] = useStateValue()
+  const [{}, dispatch] = useStateValue()
 
   const addToBasket = () =>{
      //Add item to basket
@@ -28,7 +28,7 @@ function Product({id,title,price,rating,image}) {
       <div className="product__rating">
         {
           Array(rating).fill("").map((_)=>(
-            <p><span>⭐</span></p>
+            <p><span role="img" aria-label="emoji">⭐</span></p>
           ))
         }
       </div>

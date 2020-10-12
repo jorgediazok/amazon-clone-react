@@ -9,11 +9,10 @@ import './App.css';
 import { useStateValue } from './context/StateProvider';
 
 function App() {
-  const [{basket}, dispatch] = useStateValue()
+  const [{}, dispatch] = useStateValue()
 
   useEffect(()=>{
     auth.onAuthStateChanged(authUser =>{
-      console.log("The user is ", authUser);
       if(authUser){
         //the user logged in or was logged in
         dispatch({
