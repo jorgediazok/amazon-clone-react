@@ -6,7 +6,7 @@ import "../styles/Checkout.css"
 
 function Checkout() {
 
-  const[{basket, user}, dispatch] = useStateValue();
+  const[{basket, user}] = useStateValue();
 
 
   return (

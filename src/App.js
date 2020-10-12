@@ -9,7 +9,7 @@ import './App.css';
 import { useStateValue } from './context/StateProvider';
 
 function App() {
-  const [{}, dispatch] = useStateValue()
+  const [{basket}, dispatch] = useStateValue()
 
   useEffect(()=>{
     auth.onAuthStateChanged(authUser =>{
@@ -24,12 +24,12 @@ function App() {
         //the user is logged out
         dispatch({
           type: "SET_USER",
-          user: null
+          user: null, 
         })
       }
     })
 
-  },[])
+  },[dispatch])
 
 
   return (
