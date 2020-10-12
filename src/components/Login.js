@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import {Link} from "react-router-dom"
-import { useStateValue } from '../context/StateProvider';
 import "../styles/Login.css"
 
 function Login() {
@@ -8,7 +7,15 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("")
 
-  const signIn ()
+  const signIn = e => {
+    e.preventDefault();
+    //firebase login
+  }
+
+  const register = e => {
+    e.preventDefault();
+    //firebase register
+  }
 
   return (
     <div className="login">
@@ -26,7 +33,7 @@ function Login() {
         </form>
         <p>By signing-in you agree to Amazon Fake Clone Conditions of Use & Sale. 
           Please see our Privacy Notice, our Cookies Notice and our Interest-Based Ads.</p>
-        <button className="login__registerButton">Create your Amazon account</button>
+        <button onClick={register} className="login__registerButton">Create your Amazon account</button>
       </div>
     </div>
   )
