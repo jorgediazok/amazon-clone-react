@@ -12,6 +12,10 @@ function Login() {
   const signIn = e => {
     e.preventDefault();
     //firebase login
+    auth.signInWithEmailAndPassword(email, password).then(auth => {
+      history.push("/")
+    })
+    .catch(error=>alert(error.message))
   }
 
   const register = e => {
