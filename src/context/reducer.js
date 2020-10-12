@@ -12,7 +12,7 @@ const reducer = (state, action) => {
     case "ADD_TO_BASKET": 
         //Logic for adding item to basket
     return {...state, basket:[...state.basket, action.item]}
-    break;
+    
     
     case "REMOVE_FROM_BASKET":
         //Logic for remove item from basket
@@ -26,10 +26,19 @@ const reducer = (state, action) => {
     }else{
       console.warn("Cant remove product. Error.")
     }
-    return {...state, basket: newBasket}
-    break;
-    default: 
-    return state;
+    return {
+    ...state, 
+    basket: newBasket
+    }
+    
+    case "SET_USER":
+      //Logic for authentication
+      return {
+        ...state,
+        user: action.user
+      }
+
+    default: return state;
   }
 }
 
