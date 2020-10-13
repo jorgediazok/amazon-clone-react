@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from "react-router-dom"
 import CurrencyFormat from "react-currency-format"
 import { useStateValue } from '../context/StateProvider'
 import {getBasketTotal} from "../context/reducer"
@@ -30,9 +29,7 @@ function Subtotal() {
       thousandSeparator={true}
       prefix={"$"}
       />
-      <Link to="/">
       <button onClick={e => history.push("/payment")}>Proceed to Checkout</button>
-      </Link>
     </div>
   )
 }
